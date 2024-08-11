@@ -63,13 +63,13 @@
             
             <!--------------------Contact form------------------------>
             <div class="contact-col">
-                <form name="form1" action="https://api.web3forms.com/submit" method="POST">
+                <form name="form1" id="form1" action="https://api.web3forms.com/submit" method="POST">
                     <input type="hidden" name="access_key" value="a3f4741c-553b-40a6-a3e8-88ed42088561">
-                    <input type="text" name="name" placeholder="Enter your name" required>
-                    <input type="email" name="email" placeholder="Enter your email" required>
-                    <input type="text" name="subject" placeholder="Enter your subject" required>
-                    <textarea rows="8" name="message" placeholder="Your message here" required></textarea>
-                    <button type="submit" class="hero-btn black-btn" onclick="submit_form()">Send Message</button>
+                    <input type="text" name="name" id="name" placeholder="Enter your name" required>
+                    <input type="email" name="email" id="email" placeholder="Enter your email" required>
+                    <input type="text" name="subject" id="subject" placeholder="Enter your subject" required>
+                    <textarea rows="8" name="message" id="message" placeholder="Your message here" required></textarea>
+                    <button id="btn" type="submit" class="hero-btn black-btn">Send Message</button>
                 </form>
             </div>
 
@@ -91,15 +91,13 @@
 <!--Toggle Menu JavaScript-->
     <script>
         var navLink = document.getElementById("navLinks");
+        
         function showMenu(){
             navLinks.style.right = '0';
         }
+
         function hideMenu(){
             navLinks.style.right = '-200px';
-        }
-        function submit_form() {
-            document.form1.submit();
-            document.form1.reset(); 
         }
     </script>
 </body>
